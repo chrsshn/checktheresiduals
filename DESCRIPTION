@@ -1,0 +1,21 @@
+Package: checktheresiduals
+Type: Package
+Title: Performs Normality Tests on Residuals from Linear Regression Model Fitting
+Version: 1.0
+Date: 2020-11-11
+Author: Chris Shin [aut]
+Maintainer: Chris Shin <chrsshn@gmail.com>
+Description: This package provides normality tests that can check normality assumptions for linear model fitting.
+License: MIT + file LICENSE
+Imports: 
+    Rcpp (>= 1.0.5),
+    dplyr,
+    readr,
+    tibble
+LinkingTo: Rcpp
+RoxygenNote: 7.1.1
+Suggests: 
+    testthat,
+    covr
+Depends: 
+    R (>= 2.10)

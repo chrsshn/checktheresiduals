@@ -1,0 +1,5 @@
+useDynLib(checktheresiduals, .registration=TRUE)
+importFrom(Rcpp, evalCpp)
+importFrom("stats", "na.omit")
+exportPattern("^[[:alpha:]]+")
+export ("sw_test")

@@ -1,11 +1,22 @@
+
+
+#' Perform Shapiro-Wilk Test
+#'
+#' @param x 
+#'
+#' @return
+#' @export
+#'
+#' @examples
 sw_test <- function (x) {
+  # sw_coef <- readr::read_csv (here::here ("data/sw_coefficients.csv"),
+  #                             col_types = "ddddddddddddddddddddddddddddddddddddddddddddddddd")
+  # sw_pval <- readr::read_csv (here::here("data/sw_pvalues.csv"),
+  #                             col_types = "ddddddddd")
   
-  sw_coef <- readr::read_csv ("sw_coefficients.csv")
-  sw_pval <- readr::read_csv ("sw_pvalues.csv")
   
   
-  
-  n = nrow (x)
+  n = length (x)
   
   dat_coef <- na.omit (sw_coef[,as.character(n)])
   dat_coef$diff = 0
@@ -18,6 +29,8 @@ sw_test <- function (x) {
       ordered_vals[i]
     
   }
+  
+  
   
   dat_coef$a_diff = dat_coef[,1] * dat_coef[,2]
   
@@ -34,8 +47,9 @@ sw_test <- function (x) {
   alpha = 0.05
   reject_decision <- ifelse (p_val <= alpha, "yes", "no")
   
-  print ("Shapiro-Wilk Test of Normality")
-  print (paste0("W = ", W, ", p = ", p_val))
-  print (paste0 ("Reject? ", reject_decision))
+  # print ("Shapiro-Wilk Test of Normality")
+  # print (paste0("W = ", W, ", p = ", p_val))
+  # print (paste0 ("Reject? ", reject_decision))
+  return (W)
   
 }
