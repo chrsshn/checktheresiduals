@@ -2,19 +2,15 @@
 
 #' Perform Shapiro-Wilk Test
 #'
-#' @param x 
+#' @param x a vector of values
 #'
-#' @return
+#' @return value of W statistic
 #' @export
 #'
 #' @examples
+#' sw_test (rnorm (rnorm (100, 0, 1)))
 sw_test <- function (x) {
-  # sw_coef <- readr::read_csv (here::here ("data/sw_coefficients.csv"),
-  #                             col_types = "ddddddddddddddddddddddddddddddddddddddddddddddddd")
-  # sw_pval <- readr::read_csv (here::here("data/sw_pvalues.csv"),
-  #                             col_types = "ddddddddd")
-  
-  
+ 
   
   n = length (x)
   

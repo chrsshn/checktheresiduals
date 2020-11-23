@@ -7,11 +7,14 @@
 sw_test(x)
 }
 \arguments{
-\item{x}{}
+\item{x}{a vector of values}
 }
 \value{
-
+value of W statistic
 }
 \description{
 Perform Shapiro-Wilk Test
+}
+\examples{
+sw_test (rnorm (rnorm (100, 0, 1)))
 }
